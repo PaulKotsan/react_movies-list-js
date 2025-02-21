@@ -1,14 +1,10 @@
 import './MovieCard.scss';
 
-export const MovieCard = ({movie}) => 
-<>
+export const MovieCard = ({ movie }) => (
+  <>
     <div className="card-image">
       <figure className="image is-4by3">
-        <img
-          data-cy="MovieImage"
-          src={movie.imgUrl}
-          alt={movie.imdbUrl}
-        />
+        <img data-cy="MovieImage" src={movie.imgUrl} alt={movie.imdbUrl} />
       </figure>
     </div>
 
@@ -16,7 +12,7 @@ export const MovieCard = ({movie}) =>
       <div className="media">
         <div className="media-left">
           <figure className="image is-48x48">
-            <img src={'../../../images/imdb-logo.jpeg'} alt={movie.imdbUrl} />
+            <img src="../../../images/imdb-logo.jpeg" alt={movie.imdbUrl} />
           </figure>
         </div>
 
@@ -28,14 +24,12 @@ export const MovieCard = ({movie}) =>
       </div>
 
       <div className="content">
-        <p data-cy="MovieDescription">
-          {movie.description}
-        </p>
+        <p data-cy="MovieDescription">{movie.description}</p>
 
         <a href={movie.imdbUrl} data-cy="MovieLink">
           Watch Now
         </a>
       </div>
     </div>
-
-</>
+  </>
+);
